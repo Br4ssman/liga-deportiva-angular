@@ -1,0 +1,267 @@
+
+<!-- Bloque spotlight -->
+<header class="bg-secondary py-5 text-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <h1 class="display-5 fw-bold">Liga Deportiva Maestre de Calatrava</h1>
+        <p class="lead mb-4">Competiciones escolares con emoción. Sigue resultados, jugadores y noticias.</p>
+        <button type="button" class="btn btn-warning btn-lg btn-cta me-2" data-bs-toggle="modal" data-bs-target="#modalInscripcion">
+          Inscribirse
+        </button>
+      </div>
+      <div class="col-lg-5 d-none d-lg-block">
+        <img src="assets/img/hero.webp" class="img-fluid rounded shadow" alt="Hero image">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Carrusel de noticias -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Noticias recientes</h2>
+
+  <div id="carouselNoticias" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slider 1 de 3 bloques -->
+      <div class="carousel-item active">
+        <div class="row g-4">
+          <!-- 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/not1.webp" class="card-img-top" alt="Inicio temporada">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Inicio de la temporada</h5>
+                <p class="card-text flex-grow-1">Doce equipos arrancan la competición este mes con nuevas categorías y calendario completo.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <small class="text-muted">01/10/2025</small>
+                  <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalNot1">Leer más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/not2.webp" class="card-img-top" alt="Instalaciones">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Nuevas instalaciones</h5>
+                <p class="card-text flex-grow-1">Pabellón cubierto y sala de recuperación inaugurados para esta temporada.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <small class="text-muted">25/09/2025</small>
+                  <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalNot2">Leer más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/not3.webp" class="card-img-top" alt="Torneo">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Torneo intercentros</h5>
+                <p class="card-text flex-grow-1">Jornada de convivencia con partidos amistosos y talleres deportivos.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <small class="text-muted">10/09/2025</small>
+                  <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalNot3">Leer más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Slider 1 de 2 bloques -->
+      <div class="carousel-item">
+        <!-- 4 -->
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/not4.webp" class="card-img-top" alt="Semifinales">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Semifinales en marcha</h5>
+                <p class="card-text flex-grow-1">Partidos decisivos que definirán a los finalistas en cada categoría.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <small class="text-muted">15/10/2025</small>
+                  <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalNot4">Leer más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <img src="assets/img/not5.webp" class="card-img-top" alt="Fairplay">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Premio Fair Play</h5>
+                <p class="card-text flex-grow-1">El Tigres recibe el reconocimiento por su conducta ejemplar.</p>
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <small class="text-muted">05/10/2025</small>
+                  <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalNot5">Leer más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="carousel-indicators mt-3">
+      <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselNoticias" data-bs-slide-to="1"></button>
+    </div>
+    <p class="text-center mt-5" id="contadorCarousel">Noticia 1 de 2</p>
+    <br>
+</div>
+
+<!-- Noticia 1 -->
+<div class="modal fade" id="modalNot1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Inicio de la temporada</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Este año la liga cuenta con una participación récord: 12 equipos en fútbol, 8 en baloncesto y nuevas categorías juveniles. Los partidos iniciales se celebrarán en el estadio del instituto y el calendario ya está disponible.</p>
+        <p class="text-muted"><small>Publicado: 01/10/2025</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Noticia 2 -->
+<div class="modal fade" id="modalNot2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Nuevas instalaciones</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>El nuevo pabellón polivalente permite entrenamientos todo el año y la sala de recuperación mejora la atención de los jugadores.</p>
+        <p class="text-muted"><small>Publicado: 25/09/2025</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Noticia 3 -->
+<div class="modal fade" id="modalNot3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Torneo intercentros</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Jornada de voleibol, balonmano y tenis con actividades de convivencia y talleres para entrenadores.</p>
+        <p class="text-muted"><small>Publicado: 10/09/2025</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Noticia 4 -->
+<div class="modal fade" id="modalNot4" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Semifinales en marcha</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Resultados ajustados en semifinales. La emoción está asegurada en los próximos encuentros.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Noticia 5 -->
+<div class="modal fade" id="modalNot5" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Premio Fair Play</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Reconocimiento al equipo que mejor ha representado los valores deportivos y el respeto en la competición.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Formulario modal de inscripción -->
+<div class="modal fade" id="modalInscripcion" tabindex="-1" aria-labelledby="modalInscripcionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <form id="inscripcionForm" novalidate>
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalInscripcionLabel">Formulario de inscripción - Liga Deportiva</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-muted">Rellena los datos para inscribirte. Los campos marcados con <span class="text-danger">*</span> son obligatorios.</p>
+
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="nombreIns" class="form-label">Nombre y apellidos <span class="text-danger">*</span></label>
+              <input type="text" id="nombreIns" name="nombre" class="form-control" required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="emailIns" class="form-label">Correo electrónico <span class="text-danger">*</span></label>
+              <input type="email" id="emailIns" name="email" class="form-control" required>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="telefonoIns" class="form-label">Teléfono</label>
+              <input type="tel" id="telefonoIns" name="telefono" class="form-control">
+            </div>
+
+            <div class="col-12 col-md-6">
+              <label for="competicionIns" class="form-label">Competición <span class="text-danger">*</span></label>
+              <select id="competicionIns" name="competicion" class="form-select" required>
+                <option value="">-- Selecciona competición --</option>
+                <option value="futbol">Fútbol</option>
+                <option value="baloncesto">Baloncesto</option>
+                <option value="tenis">Tenis</option>
+                <option value="voleibol">Voleibol</option>
+                <option value="balonmano">Balonmano</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label for="equipoIns" class="form-label">Equipo (si ya existe)</label>
+              <input type="text" id="equipoIns" name="equipo" class="form-control" placeholder="Nombre del equipo (opcional)">
+            </div>
+
+            <div class="col-12">
+              <label for="comentariosIns" class="form-label">Comentarios / Observaciones</label>
+              <textarea id="comentariosIns" name="comentarios" class="form-control" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success">Enviar inscripción</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Msg enviado -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080;">
+  <div id="toastInscripcion" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Inscripción enviada correctamente.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+    </div>
+  </div>
+</div>

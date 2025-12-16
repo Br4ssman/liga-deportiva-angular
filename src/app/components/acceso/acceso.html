@@ -1,0 +1,72 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    
+    <div class="col-12 col-lg-10 col-xl-8">
+      <div class="card shadow-lg border-0">
+        <div class="row g-0">
+          
+          <!-- REGISTRO -->
+          <div class="col-md-6 p-4 border-end">
+            <h4 class="text-center mb-3">Registro</h4>
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+              <div class="mb-3">
+                <label class="form-label">Usuario</label>
+                <input type="text" class="form-control" placeholder="Usuario" formControlName="username">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" placeholder="Correo" formControlName="email">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Tipo de usuario</label>
+                <select class="form-select" formControlName="tipo">
+                  <option value="normal">Usuario normal</option>
+                  <option value="admin">Admin</option>
+                  <option value="arbitro">Árbitro</option>
+                  <option value="capitan">Capitán</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-success w-100">
+                Crear cuenta
+              </button>
+
+            </form>
+          </div>
+
+          <!-- LOGIN -->
+          <div class="col-md-6 p-4 bg-light">
+            <h4 class="text-center mb-3">Iniciar sesión</h4>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+              <div class="mb-3">
+                <label class="form-label">Usuario</label>
+                <input type="text" class="form-control" placeholder="Usuario" formControlName="username">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Acceder
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

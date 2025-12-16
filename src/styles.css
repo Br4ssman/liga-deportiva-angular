@@ -1,0 +1,23 @@
+html {scroll-behavior: smooth;}
+
+#carouselNoticias .carousel-indicators [data-bs-target] {
+  width: 40px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+#carouselNoticias .carousel-indicators .active {
+  background-color: #28a745;
+  width: 50px;
+}
+
+#carouselNoticias .carousel-indicators [data-bs-target]:hover {
+  background-color: #1e7e34;
+  cursor: pointer;
+}
+
+p.mb-1 a {color: #a2acb4;}

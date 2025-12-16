@@ -1,0 +1,36 @@
+<!-- Menú -->
+<nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+      <i class="bi bi-trophy-fill text-warning fs-4 me-2"></i> LDMC
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navCollapse" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto nav-pills">
+        <li class="nav-item"><a class="nav-link" routerLink="/home">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/competiciones">Competiciones</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/equipos">Equipos</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/resultados">Resultados</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/clasificaciones">Clasificaciones</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/jugadores">Jugadores</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/arbitros">Árbitros</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/contacto">Contacto</a></li>
+        @if (!auth.isLoggedIn()) {
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-warning fw-bold px-3" routerLink="/acceso">
+              <i class="bi bi-box-arrow-in-right me-1"></i>Acceso
+            </a>
+          </li>
+        } @else {
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-danger fw-bold px-3" (click)="logout()">
+              <i class="bi bi-box-arrow-right me-1"></i>Logout
+            </button>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>

@@ -1,0 +1,56 @@
+<!-- Formulario de contacto -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Contacto</h2>
+
+  <div class="row g-4">
+    <div class="col-12 col-lg-6">
+      <h5><i class="bi bi-question-circle"></i> Preguntas frecuentes</h5>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq1"> ¿Cómo inscribo un equipo?</button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Completa el formulario de inscripción que se publicará al inicio de la temporada.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">¿Dónde ver resultados?</button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Los resultados se publicarán en la sección 'Resultados' y se actualizarán tras cada jornada.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <form id="contactForm">
+        <div class="mb-3">
+          <label for="nombreContacto" class="form-label">Nombre</label>
+          <input id="nombreContacto" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="emailContacto" class="form-label">Email</label>
+          <input id="emailContacto" type="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensajeContacto" class="form-label">Mensaje</label>
+          <textarea id="mensajeContacto" class="form-control" rows="4" required></textarea>
+        </div>
+        <button class="btn btn-success" type="submit"><i class="bi bi-envelope"></i> Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Msg enviado -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index:1080">
+  <div id="toastEnvio" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">Mensaje enviado correctamente.</div>
+      <button class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>

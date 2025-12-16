@@ -1,0 +1,103 @@
+<!-- Equipos -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Equipos</h2>
+
+  <div class="d-flex justify-content-center mb-4">
+    <div class="dropdown">
+      <button class="btn btn-outline-success dropdown-toggle" id="filtroBtn" data-bs-toggle="dropdown">
+        Filtrar por competición: <span id="filtroText">Todas</span>
+      </button>
+      <ul class="dropdown-menu text-center">
+        <li><a class="dropdown-item filtro" href="#" data-comp="all">Todas</a></li>
+        <li><a class="dropdown-item filtro" href="#" data-comp="Fútbol">Fútbol</a></li>
+        <li><a class="dropdown-item filtro" href="#" data-comp="Baloncesto">Baloncesto</a></li>
+        <li><a class="dropdown-item filtro" href="#" data-comp="Voleibol">Voleibol</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row g-4" id="listaEquipos">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 equipo-card" data-competition="Fútbol">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/img/halcones.webp" class="card-img-top" alt="Halcones" style="height:160px; object-fit:cover;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Los Halcones</h5>
+          <p class="text-muted">Capitán: Pedro Sánchez</p>
+          <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalEquipo1">Ver equipo</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 equipo-card" data-competition="Baloncesto">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/img/aguilas.webp" class="card-img-top" alt="Águilas" style="height:160px; object-fit:cover;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Águilas</h5>
+          <p class="text-muted">Capitán: Ana Gómez</p>
+          <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalEquipo2">Ver equipo</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 equipo-card" data-competition="Voleibol">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/img/tigres.webp" class="card-img-top" alt="Tigres" style="height:160px; object-fit:cover;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Tigres</h5>
+          <p class="text-muted">Capitán: Luis Martínez</p>
+          <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalEquipo3">Ver equipo</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal Equipos -->
+<div class="modal fade" id="modalEquipo1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Los Halcones</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Capitán:</strong> Pedro Sánchez</p>
+        <p><strong>Jugadores:</strong> 12</p>
+        <p><strong>Posición:</strong> 1º</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEquipo2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Águilas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Capitán:</strong> Ana Gómez</p>
+        <p><strong>Jugadores:</strong> 10</p>
+        <p><strong>Posición:</strong> 2º</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalEquipo3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Tigres</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Capitán:</strong> Luis Martínez</p>
+        <p><strong>Jugadores:</strong> 11</p>
+        <p><strong>Posición:</strong> 3º</p>
+      </div>
+    </div>
+  </div>
+</div>
