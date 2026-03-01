@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { JugadorService } from '../../services/jugador.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-jugadores',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './jugadores.html',
   styleUrl: './jugadores.css',
 })
-export class Jugadores {
+export class Jugadores implements OnInit {
+  private jugadorService = inject(JugadorService);
+  jugadores: any[] = [];
 
+  ngOnInit(): void {
+    this.jugadorService.getJugadores().subscribe(data => {
+      this.jugadores = data;
+    });
+  }
 }

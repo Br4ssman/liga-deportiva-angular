@@ -27,11 +27,6 @@ app.get('/', (req, res) => {
   res.send('API Liga Deportiva funcionando');
 });
 
-// HEALTH CHECK (Render)
-app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok' });
-});
-
 // ARRANQUE
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

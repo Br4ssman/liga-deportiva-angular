@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Jugadores } from './jugadores';
+import { JugadorService } from '../../services/jugador.service';
 
 describe('Jugadores', () => {
   let component: Jugadores;
@@ -8,7 +9,9 @@ describe('Jugadores', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Jugadores]
+      // Importamos Jugadores (standalone) y el módulo de pruebas de HTTP
+      imports: [Jugadores, HttpClientTestingModule],
+      providers: [JugadorService]
     })
     .compileComponents();
 
@@ -17,7 +20,7 @@ describe('Jugadores', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('debe crear el componente de jugadores', () => {
     expect(component).toBeTruthy();
   });
 });

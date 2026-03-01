@@ -1,71 +1,16 @@
-<!-- Jugadores -->
 <section class="container my-5">
   <h2 class="text-center mb-4">Jugadores</h2>
-
-  <div class="input-group mb-4">
-    <span class="input-group-text"><i class="bi bi-search"></i></span>
-    <input id="buscarJugador" type="text" class="form-control" placeholder="Buscar jugador por nombre...">
-  </div>
-
   <div class="row g-4" id="listaJugadores">
-    <div class="col-12 col-sm-6 col-md-4 jugador-card" data-nombre="Carlos Ruiz">
-      <div class="card h-100 shadow-sm">
-        <img src="assets/img/jugador1.webp" class="card-img-top" alt="Carlos Ruiz" style="height:200px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="card-title">Carlos Ruiz</h5>
-          <p class="text-muted">Fútbol - Delantero</p>
-          <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalJugador1">Ver ficha</button>
+    @for (jugador of jugadores; track jugador.id) {
+      <div class="col-12 col-sm-6 col-md-4 jugador-card">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ jugador.nombre }}</h5>
+            <p class="text-muted">{{ jugador.posicion }}</p>
+            <button class="btn btn-dark btn-sm">Ver ficha</button>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="col-12 col-sm-6 col-md-4 jugador-card" data-nombre="Laura Pérez">
-      <div class="card h-100 shadow-sm">
-        <img src="assets/img/jugador2.webp" class="card-img-top" alt="Laura Pérez" style="height:200px; object-fit:cover;">
-        <div class="card-body text-center">
-          <h5 class="card-title">Laura Pérez</h5>
-          <p class="text-muted">Baloncesto - Base</p>
-          <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalJugador2">Ver ficha</button>
-        </div>
-      </div>
-    </div>
+    }
   </div>
 </section>
-
-<!-- Modal jugadores -->
-<div class="modal fade" id="modalJugador1" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-dark text-white">
-        <h5 class="modal-title">Carlos Ruiz</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <ul>
-          <li>Edad: 18</li>
-          <li>Posición: Delantero</li>
-          <li>Goles: 6</li>
-          <li>Asistencias: 3</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modalJugador2" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header bg-dark text-white">
-        <h5 class="modal-title">Laura Pérez</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <ul>
-          <li>Edad: 17</li>
-          <li>Posición: Base</li>
-          <li>Puntos: 120</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
