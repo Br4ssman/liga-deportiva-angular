@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { JugadorService } from './jugador.service';
+import { environment } from '../../environments/environment';
 
 describe('JugadorService (Integración)', () => {
   let service: JugadorService;
@@ -30,7 +31,7 @@ describe('JugadorService (Integración)', () => {
       expect(data).toEqual(mockJugadores);
     });
 
-    const req = httpMock.expectOne('http://localhost:8000/api/jugadores');
+    const req = httpMock.expectOne('${environment.apiUrl}/jugadores');
     expect(req.request.method).toBe('GET');
     
     req.flush(mockJugadores); 
