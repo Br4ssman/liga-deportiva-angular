@@ -31,7 +31,7 @@ describe('JugadorService (Integración)', () => {
       expect(data).toEqual(mockJugadores);
     });
 
-    const req = httpMock.expectOne('${environment.apiUrl}/jugadores');
+    const req = httpMock.expectOne(`${environment.apiUrl}/jugadores`);
     expect(req.request.method).toBe('GET');
     
     req.flush(mockJugadores); 

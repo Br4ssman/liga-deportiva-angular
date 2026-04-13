@@ -30,7 +30,7 @@ describe('AuthService', () => {
       expect(localStorage.getItem('token')).toBe('12345');
     });
 
-    const req = httpMock.expectOne('${environment.apiUrl}/auth');
+    const req = httpMock.expectOne(`${environment.apiUrl}/auth/login`);
     expect(req.request.method).toBe('POST');
     req.flush(mockResponse);
   });
