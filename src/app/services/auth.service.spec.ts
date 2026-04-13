@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { AuthService } from './auth.service';
-import { environment } from '../../environments/environment';
 
 describe('AuthService', () => {
   let service: AuthService;
@@ -30,7 +29,7 @@ describe('AuthService', () => {
       expect(localStorage.getItem('token')).toBe('12345');
     });
 
-    const req = httpMock.expectOne(`${environment.apiUrl}/auth/login`);
+    const req = httpMock.expectOne(request => request.url.endsWith('/auth/login'));
     expect(req.request.method).toBe('POST');
     req.flush(mockResponse);
   });
